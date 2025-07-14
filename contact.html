@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Full & Stories Café</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Menu</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-info">
+      <h1>Contact Us</h1>
+      <p>Have a question, suggestion, or just want to say hi? Reach out below.</p>
+      <div class="info-grid">
+        <div>
+          <h3>📧 Email</h3>
+          <p><a href="mailto:fullandstories@gmail.com">fullandstories@gmail.com</a></p>
+        </div>
+        <div>
+          <h3>📞 Phone</h3>
+          <p><a href="tel:+60123456789">+60 12-345 6789</a></p>
+        </div>
+        <div>
+          <h3>📍 Address</h3>
+          <p><a href="https://www.google.com/maps?q=Masjid+Negara,+Kuala+Lumpur,+Malaysia" target="_blank">
+            Masjid Negara,<br>Kuala Lumpur, Malaysia
+          </a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="mailto:fullandstories@gmail.com" method="POST" enctype="text/plain" onsubmit="return handleSubmit(this)">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" placeholder="Your full name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" placeholder="example@email.com" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+    <div id="form-confirmation" class="confirmation-popup hidden">
+  <p>✅ Thank you! Your message has been sent.</p>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Full & Stories Café. All Rights Reserved.</p>
+  </footer>
+
+ <script>
+  function handleSubmit(form) {
+    setTimeout(() => {
+      form.reset();
+      showConfirmation();
+    }, 100);
+    return true;
+  }
+
+  function showConfirmation() {
+    const popup = document.getElementById("form-confirmation");
+    popup.classList.remove("hidden");
+    popup.classList.add("show");
+
+    setTimeout(() => {
+      popup.classList.remove("show");
+      popup.classList.add("hidden");
+    }, 3000); // Hide after 3 seconds
+  }
+</script>
+
+
+</body>
+</html>

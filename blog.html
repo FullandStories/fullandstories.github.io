@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | Full & Stories Café</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body class="blog-body">
+  <div class="blog-wrapper">
+    <header class="site-header">
+      <div class="container">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Menu</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="blog-intro">
+        <h1>Full & Stories: Blog</h1>
+      </section>
+
+      <section class="blog-grid">
+
+        <!-- Blog Post: Company News -->
+        <div class="blog-post">
+          <h3>Company News</h3>
+          <p class="date">July 12, 2024</p>
+          <p>
+            Located next to Masjid Negara, FULL & STORIES made its official debut in June 2024...
+            <span class="more-text" style="display: none;">
+              After its Strawberry Matcha Latte became popular on TikTok in July, the café saw an increase in web traffic. The group started working with regional artists on limited-edition packaging in August. To improve the consumer experience, a digital ordering system is currently being developed.
+            </span>
+          </p>
+          <a href="#" class="read-more-toggle">Read More →</a>
+        </div>
+
+        <!-- Blog Post: Articles -->
+        <div class="blog-post">
+          <h3>Featured Articles</h3>
+          <p class="date">November 1, 2024</p>
+          <p>
+            “Desserts with Meaning” is a blog article that highlights the café’s menu's emotional inspiration...
+            <span class="more-text" style="display: none;">
+              A local recommendation titled "Best Café After Masjid Negara" recommends FULL & STORIES as a peaceful place to stop for desserts and drinks. A little article titled "The Story Behind Our Milkshake" describes how the Cotton Candy Milkshake rose to popularity.
+            </span>
+          </p>
+          <a href="#" class="read-more-toggle">Read More →</a>
+        </div>
+
+        <!-- Blog Post: Industry Trends -->
+        <div class="blog-post">
+          <h3>Industry Trends</h3>
+          <p class="date">May 28, 2025</p>
+          <p>
+            Trends in Malaysia’s café scene include aesthetic food presentation and local flavor fusion...
+            <span class="more-text" style="display: none;">
+              Customers also value social media-friendly menus, healthier dessert options, and cafés that support local creatives. Emotional branding is rising as people connect stories with taste and experience.
+            </span>
+          </p>
+          <a href="#" class="read-more-toggle">Read More →</a>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Full & Stories Café. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.read-more-toggle').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const moreText = this.previousElementSibling.querySelector('.more-text');
+
+        if (moreText.style.display === 'none' || !moreText.style.display) {
+          moreText.style.display = 'inline';
+          this.textContent = 'Read Less ←';
+        } else {
+          moreText.style.display = 'none';
+          this.textContent = 'Read More →';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
